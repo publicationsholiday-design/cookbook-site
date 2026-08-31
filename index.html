@@ -100,6 +100,24 @@
     box-shadow:0 1px 4px rgba(0,0,0,.4);transition:background .25s,transform .25s}
   .hc-dot.is-active{background:#fff;transform:scale(1.15)}
 
+
+  /* ---------- Cullen Cooke Berry author banner (added) ---------- */
+  .authorcp{display:flex;gap:18px;align-items:center;background:var(--card);
+    border:1px solid var(--line);border-left:5px solid #E8612C;border-radius:16px;
+    padding:22px 24px;margin:34px 0 6px}
+  .authorcp .ac-txt{flex:1 1 auto}
+  .authorcp .ac-k{font-family:'Helvetica Neue',Arial,sans-serif;font-size:11px;
+    letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+  .authorcp h3{font-size:21px;margin:0 0 4px;color:var(--ink)}
+  .authorcp p{margin:0 0 12px;color:var(--muted);font-size:15px}
+  .authorcp a.ac-btn{display:inline-block;background:#E8612C;color:#fff;text-decoration:none;
+    font-family:'Helvetica Neue',Arial,sans-serif;font-weight:700;padding:12px 24px;
+    border-radius:40px;font-size:14px}
+  .authorcp a.ac-btn:hover{background:#C44E20}
+  .affnote{max-width:640px;margin:14px auto 0;text-align:center;
+    font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;color:var(--muted);line-height:1.5}
+  @media(max-width:520px){.authorcp{flex-direction:column;text-align:center;align-items:stretch}}
+
 </style>
 
 </head>
@@ -153,11 +171,23 @@
   </div>
   <iframe name="ml_iframe_cb" style="display:none"></iframe>
 
+
+  <!-- Cullen Cooke Berry author books (Amazon) -->
+  <div class="authorcp">
+    <div class="ac-txt">
+      <div class="ac-k">Also from our kitchen</div>
+      <h3>Cookbooks on Amazon by Cullen Cooke Berry</h3>
+      <p>Baking, salads, instant pot, superfoods, kids' lunches &amp; more &mdash; the full collection in Kindle &amp; paperback.</p>
+      <a class="ac-btn" href="https://www.amazon.com/stores/Cullen-Cooke-Berry/author/B0FK2VM5YM?tag=cookbook090e-21" target="_blank" rel="noopener sponsored">Browse the cookbooks &rarr;</a>
+    </div>
+  </div>
+
   <div class="crosspromo"><h3>More from our studio</h3><div class="cp-grid"><a href="https://publicationsholiday-design.github.io/Planmytravel-site/"><span class="cp-name">Plan My Travel</span><span class="cp-tag">City itineraries worldwide</span></a><a href="https://apps.apple.com/us/app/plan-my-travel-itinerary/id6775488087"><span class="cp-name">Plan My Travel App</span><span class="cp-tag">iOS app</span></a><a href="https://www.amazon.com/stores/author/B0F28R1F5G/allbooks"><span class="cp-name">Puzzle Books on Amazon</span><span class="cp-tag">Brain teasers &amp; fun</span></a><a href="https://publicationsholiday-design.github.io/numastra-site/"><span class="cp-name">Numastra</span><span class="cp-tag">Your daily prediction</span></a></div></div>
 </main>
 <footer>
   <p>All-in-One Recipes Cookbook &middot; 700+ recipes for every kitchen.<br>
   <a href="#" onclick="goToStore(event)">Get the app</a></p>
+<p class="affnote">As an Amazon Associate we earn from qualifying purchases.</p>
 </footer>
 
 <script>
