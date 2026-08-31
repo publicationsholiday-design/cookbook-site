@@ -87,6 +87,22 @@
   footer a{color:#E8945C;text-decoration:none}
   @media(max-width:600px){header.hero h1{font-size:29px}body{font-size:17px}h2{font-size:23px}
     .facts div{flex:1 1 100%;border-right:none;border-bottom:1px solid var(--line)}.facts div:last-child{border-bottom:none}}
+
+  /* ---------- amazon book cross-promo (added) ---------- */
+  .bookcp{display:flex;gap:18px;align-items:center;background:var(--card);
+    border:1px solid var(--line);border-left:5px solid #E8612C;border-radius:16px;
+    padding:20px 22px;margin:24px 0}
+  .bookcp .bc-txt{flex:1 1 auto}
+  .bookcp .bc-k{font-family:'Helvetica Neue',Arial,sans-serif;font-size:11px;
+    letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+  .bookcp h3{font-size:20px;margin:0 0 4px;color:var(--ink)}
+  .bookcp p{margin:0 0 12px;color:var(--muted);font-size:15px}
+  .bookcp a.bc-btn{display:inline-block;background:#E8612C;color:#fff;
+    text-decoration:none;font-family:'Helvetica Neue',Arial,sans-serif;font-weight:700;
+    padding:11px 22px;border-radius:40px;font-size:14px}
+  .bookcp a.bc-btn:hover{background:#C44E20}
+  @media(max-width:520px){.bookcp{flex-direction:column;text-align:center;align-items:stretch}}
+
 </style>
 
 </head>
@@ -139,6 +155,16 @@
     <a href="#" onclick="goToStore(event)">Get the free app</a>
     <div class="note">700+ recipes &middot; grocery lists &middot; audio cook-along</div>
   </div>
+  <!-- Amazon book cross-promo -->
+  <div class="bookcp">
+    <div class="bc-txt">
+      <div class="bc-k">Prefer a book?</div>
+      <h3>Vegan Appetizers Cookbook</h3>
+      <p>The same kind of recipes as a Kindle &amp; paperback cookbook by Cullen Cooke Berry, on Amazon.</p>
+      <a class="bc-btn" href="https://www.amazon.com/Appetizers-Cookbook-Vegetarian-Protein-Recipes-ebook/dp/B0FQ2KK7MH?tag=cookbook090e-21" target="_blank" rel="noopener sponsored">View on Amazon &rarr;</a>
+    </div>
+  </div>
+
 
   
   <div class="signup">
@@ -158,11 +184,14 @@
 
   <div class="related"><a href="index.html">&larr; Browse all recipe categories</a></div>
   <div class="crosspromo"><h3>More from our studio</h3><div class="cp-grid"><a href="https://publicationsholiday-design.github.io/Planmytravel-site/"><span class="cp-name">Plan My Travel</span><span class="cp-tag">City itineraries worldwide</span></a><a href="https://apps.apple.com/us/app/plan-my-travel-itinerary/id6775488087"><span class="cp-name">Plan My Travel App</span><span class="cp-tag">iOS app</span></a><a href="https://www.amazon.com/stores/author/B0F28R1F5G/allbooks"><span class="cp-name">Puzzle Books on Amazon</span><span class="cp-tag">Brain teasers &amp; fun</span></a></div></div>
+
+  <div class="crosspromo"><h3>More from Holiday Publications</h3><div class="cp-grid"><a href="https://publicationsholiday-design.github.io/"><span class="cp-name">All our apps &amp; books</span><span class="cp-tag">Studio home</span></a><a href="https://publicationsholiday-design.github.io/Planmytravel-site/"><span class="cp-name">Plan My Travel</span><span class="cp-tag">City itineraries worldwide</span></a><a href="https://publicationsholiday-design.github.io/numastra-site/"><span class="cp-name">Numastra</span><span class="cp-tag">Your daily reading</span></a><a href="https://publicationsholiday-design.github.io/detective-hutch-site/"><span class="cp-name">Detective Hutch</span><span class="cp-tag">Cryptogram mysteries</span></a></div></div>
 </main>
 
 <footer>
   <p>All-in-One Recipes Cookbook &middot; 700+ recipes for every kitchen.<br>
   <a href="#" onclick="goToStore(event)">Get the app</a> &middot; <a href="index.html">All categories</a></p>
+<p class="affnote">As an Amazon Associate we earn from qualifying purchases. Links to books above are affiliate links.</p>
 </footer>
 
 <script>
