@@ -210,12 +210,36 @@ For Dressing:</li><li>3 tablespoons extra-virgin olive oil</li><li>1 tablespoon 
 
 <script>
 function goToStore(e){
-  if(e) e.preventDefault();
-  var ua=navigator.userAgent||"";
-  var ios=/iPad|iPhone|iPod/.test(ua);
-  window.location.href = ios ? "https://apps.apple.com/us/app/all-in-one-recipes-cookbook/id6773658362" : "https://play.google.com/store/apps/details?id=com.hk.cookbook_app";
-}
+    if(e) e.preventDefault();
+    var ua = navigator.userAgent || "";
+    if(/Android/i.test(ua)){ window.location.href = "https://play.google.com/store/apps/details?id=com.hk.cookbook_app"; return; }
+    if(/iPad|iPhone|iPod/i.test(ua)){ window.location.href = "https://apps.apple.com/us/app/all-in-one-recipes-cookbook/id6773658362"; return; }
+    var m = document.getElementById('store-modal');
+    if(m) m.style.display = 'flex';
+  }
+  function closeStoreModal(){ var m=document.getElementById('store-modal'); if(m) m.style.display='none'; }
 </script>
+
+<!-- Choose-your-store modal (desktop) -->
+<div id="store-modal" onclick="if(event.target===this)closeStoreModal()"
+     style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(44,36,32,.55);
+            align-items:center;justify-content:center;padding:20px">
+  <div style="background:#fff;border-radius:18px;max-width:380px;width:100%;
+              padding:28px 26px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.3);
+              font-family:'Helvetica Neue',Arial,sans-serif">
+    <h3 style="font-family:Georgia,serif;color:#E8612C;font-size:22px;margin:0 0 6px">Get the app</h3>
+    <p style="color:#7A6E64;font-size:15px;margin:0 0 20px">Choose your device to download free.</p>
+    <a href="https://apps.apple.com/us/app/all-in-one-recipes-cookbook/id6773658362" target="_blank" rel="noopener"
+       style="display:block;background:#111;color:#fff;text-decoration:none;font-weight:700;
+              padding:14px;border-radius:40px;margin-bottom:12px;font-size:15px"> Download on the App Store</a>
+    <a href="https://play.google.com/store/apps/details?id=com.hk.cookbook_app" target="_blank" rel="noopener"
+       style="display:block;background:#E8612C;color:#fff;text-decoration:none;font-weight:700;
+              padding:14px;border-radius:40px;font-size:15px">&#9654; Get it on Google Play</a>
+    <button onclick="closeStoreModal()"
+       style="margin-top:16px;background:none;border:none;color:#7A6E64;font-size:13px;
+              cursor:pointer;text-decoration:underline">Maybe later</button>
+  </div>
+</div>
 
 </body>
 </html>
